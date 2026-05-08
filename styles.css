@@ -100,6 +100,7 @@ body{
     width: 100%;
 }
 
+/* GRID COMPUTADOR  */
 @media (min-width: 1024px) {
     .dashboard{
         /* Layout de 2 columns: sidebar + contenido main */
@@ -174,6 +175,33 @@ body{
     }
 }
 
-@media (min-widht: 768px){
-    
+/* GRID TABLET */
+
+@media (min-width: 768px){
+    .dashboard{
+        /* Layout de 1 columns: contenido main */
+        grid-template-rows: 70px 1fr auto;
+
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    }
+
+    .header{
+        grid-area: header;
+        padding: 1rem 2rem;
+    }
+
+    .main-content{
+        grid-area: main;
+        max-width: none;
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .stats-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
